@@ -8,6 +8,11 @@ A command-line Java program to apply filters to images, developed as part of a c
 At least one filter had to be specified, as its number (see below).
 Supported file types were PNG, JPEG and a custom-made, text-based format called ESI (Ensica Simple Image). 
 
+## ESI format description
+
+On the first line: `width height`  
+The `height` next lines contain space-separated values for the red, green and blue components of each of the `width` pixels, in this order. Value range is 0-255. 
+
 ## Build
 
 Maven is used to build the project. In the `imageFilters` directory, type  
@@ -19,12 +24,12 @@ Only three of these were required to pass the course, but I did more for fun.
 
 0. Identity, used for simple format conversions
 1. Grayscale (required)
-2. Blur (required - not implemented)
+2. Blur (required)
 3. Color inverter (required)
 4. Sepia
 5. XFlip (mirror along horizontal line)
 6. YFlip (mirror along vertical line)
 
-## Licence
+## License
 
-GPLv3, see the LICENCE file for more details
+GPLv3, see the LICENSE file for more details
